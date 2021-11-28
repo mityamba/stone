@@ -1,0 +1,548 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #EBE6D1;
+    overflow: hidden;
+    background-image: url('https://stone.gisit.ru/svg/backStar.svg');
+    background-size: contain;
+}
+
+h1 {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+#listDiv {
+    position: fixed;
+    top: 84px;
+    right: -300px;
+    padding: 24px;
+    height: 100%;
+    display: block;
+    width: 200px;
+    transition: 0.2s;
+}
+
+#listDivDiv {
+    display: block;
+}
+
+#sickDiv {
+    overflow: hidden;
+    width: 100%;
+}
+
+#sickDivDiv {
+    height: 400px;
+    margin-bottom: 12px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+#sickDivDiv::-webkit-scrollbar {
+    width: 0px;
+}
+
+#sick {
+    display: block;
+}
+
+.list {
+    padding: 10px;
+    background: #e2d28b;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 16px;
+}
+
+.list img {
+    margin: -10px;
+    padding-bottom: 14px;
+    width: calc(100% + 20px);
+    border-radius: 6px 6px 0px 0px;
+    cursor: auto;
+}
+
+#next {
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+#next:hover {
+    background: #000;
+}
+
+#help {
+    background: #63948C;
+    color: white;
+    text-align: center;
+}
+
+#help:hover {
+    background: #16915D;
+}
+
+#descDiv {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    display: none;
+    width: 100%;
+    transition: 0.2s;
+    background: rgba(0,0,0,0.6);
+}
+
+#descDivDiv {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}
+
+#descDivDivDiv {
+    height: auto;
+    background: #EBE6D1;
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+    padding: 24px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+#descDivDivDivDiv {
+    height: auto;
+    background: #63948C;
+    color: white;
+    text-align: left;
+    font-weight: 400;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0px 0px 12px 12px;
+    transition: 0.2s;
+    text-align: center;
+}
+
+#descDivDivDivDiv:hover {
+    background: #16915D;
+}
+
+#startDiv {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    display: table;
+    width: 100%;
+    transition: 0.2s;
+    background: rgba(0,0,0,0.6);
+}
+
+#startDivDiv {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}
+
+#startDivDivDiv {
+    height: auto;
+    background: #EBE6D1;
+    text-align: left;
+    font-weight: normal;
+    padding: 24px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+#startDivDivDivDiv {
+    height: auto;
+    background: #63948C;
+    color: white;
+    text-align: left;
+    font-weight: 400;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0px 0px 12px 12px;
+    transition: 0.2s;
+    text-align: center;
+}
+
+#startDivDivDivDiv:hover {
+    background: #16915D;
+}
+
+#back {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    height: auto;
+    /*display: table;*/
+    display: block;
+    width: auto;
+    cursor: pointer;
+    padding: 10px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 13px;
+    border-radius: 50%;
+    color: white;
+    transition: 0.2s;
+    background: #333;
+    font-size: 14px;
+}
+
+#actionDiv {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    /*display: table;*/
+    display: none;
+    width: 100%;
+    transition: 0.2s;
+    background: rgba(0,0,0,0.6);
+}
+
+#actionDivDiv {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}
+
+#actionDivDiv #word {
+    background: #EBE6D1;
+    padding: 24px;
+    padding-bottom: 0px;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#actionDivDivDiv {
+    height: auto;
+    background: #EBE6D1;
+    padding: 24px;
+    padding-bottom: 0px;
+    width: 100%;
+    max-width: 300px;
+    column-count: 3;
+    column-gap: 24px;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.noUse {
+    padding: 10px;
+    background: #ccc;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 24px;
+}
+
+.noUse:hover {
+    background: #e2d28b;
+}
+
+.Use {
+    padding: 14px;
+    background: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: not-allowed;
+    transition: 0.5s;
+    margin-bottom: 24px;
+}
+
+#actionDivDivDiv div img {
+    width: 100%;
+}
+
+#iconDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 24px;
+    height: 100%;
+    display: table;
+    width: 100px;
+    transition: 0.2s;
+}
+
+#iconDivDiv {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 100%;
+}
+
+#iconDivDivDiv {
+    height: 500px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+#iconDivDivDiv::-webkit-scrollbar {
+    width: 0px;
+}
+
+.iconUse {
+    padding: 14px;
+    background: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor:not-allowed;
+    transition: 0.5s;
+    opacity: 0.25;
+    margin-bottom: 24px;
+}
+
+.iconUse img {
+    width: 100%;
+}
+
+.iconUse div {
+    display: none;
+}
+
+.icon {
+    padding: 10px;
+    background: #e2d28b;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 24px;
+}
+
+.icon img {
+    width: 100%;
+}
+
+.icon div {
+    font-size: 12px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 0px 0px 6px 6px;
+    background: #b9b5a4;
+    color: #333;
+    margin: -10px;
+    margin-top: 0px;
+}
+
+.icon:hover {
+    background: #333;
+}
+
+#healthDiv {
+    position: absolute;
+    bottom: 24px;
+    left: 20%;
+    width: 60%;
+    padding: 0px;
+    border-radius: 6px;
+    background: #ddd;
+}
+
+#health {
+    padding: 6px;
+    background: #63948C;
+    border-radius: 6px;
+    width: 100%;
+    transition: 0.5s;
+    height: 30px;
+}
+
+#healthDivText {
+    position: absolute;
+    bottom: 26px;
+    left: 20%;
+    width: 60%;
+    padding: 0px;
+    border-radius: 6px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+#hero {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 24px;
+    left: 0px;
+    background: none;
+    font-size: 24px;
+    color: #333;
+    display: block;
+    text-align: center;
+}
+
+#level {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 76px;
+    left: 0px;
+    background: none;
+    display: block;
+    text-align: center;
+}
+
+#level span {
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #333;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#level span:first-child {
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+}
+
+#level span:last-child {
+    border-radius: 0px 10px 10px 0px;
+    padding-right: 10px;
+}
+
+#finish {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%), rgba(48, 11, 92, 0.5);
+    display: none;
+    vertical-align: middle;
+}
+
+#finish div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#finish div div {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 36px;
+    padding-top: 44px;
+}
+
+#status {
+    position: fixed;
+    bottom: -100px;
+    background: darkgrey;
+    left: calc(50% - 100px);
+    border-radius: 6px;
+    padding: 6px;
+    width: 200px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#person {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    transition: 0.5s;
+}
+
+#up {
+    position: fixed;
+    width: 300px;
+    left: calc(50% - 150px);
+    bottom: -700px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#down {
+    position: fixed;
+    width: 300px;
+    left: calc(50% - 150px);
+    top: -700px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+@media all and (max-width: 480px) {
+    #healthDiv {
+        left: 10%;
+        width: 80%;
+    }
+    #iconDivDivDiv {
+        height: 60%;
+    }
+    #sickDivDiv {
+        height: 240px;
+    }
+    #person {
+        padding-top: 27.5%;
+        padding-bottom: 20%;
+    }
+    #listDiv {
+        width: calc(50% + 24px);
+    }
+    #iconDiv {
+        padding: 12px;
+        height: 100%;
+        display: table;
+        width: 80px;
+    }
+    .icon, .iconUse {
+        margin-bottom: 12px;
+    }
+    #level {
+        top: 64px;
+    }
+    #level span {
+        padding: 6px;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #333;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    #health {
+        font-size: 18px;
+    }
+}
