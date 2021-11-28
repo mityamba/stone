@@ -1,0 +1,134 @@
+.footer {
+	position: relative;
+	background: #2E303F;
+		&__container {
+		}
+
+		&__body {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 145px;
+		}
+
+		&__logo-block {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 200px;
+			height: 70px;
+			border-radius: 50px;
+			background: #EBE6D1;
+			overflow: hidden;
+			margin-bottom: 110px;
+			transition: 0.5s ease;
+			& a {
+				text-decoration: none;
+				color: #EBE6D1;
+				text-decoration: none;
+				position: relative;
+				font-size: 12px;
+				font-weight: 700;
+				line-height: 16px;
+				color: #2E303F;
+			}
+		}
+
+		&__logo-wrapper {
+			display: flex;
+			align-items: center;
+			transition: 0.5s ease;
+		}
+
+		&__logo {
+			margin-right: 10px;
+			transition: 0.5s ease;
+			width: 45px;
+			height: 45px;
+			background: url('../source/images/logoBlack.svg') no-repeat;
+			transition: 0.5s ease;
+		}
+
+		&__logo-text {
+
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+		}
+		&__content {
+			display: flex;
+			margin-bottom: 50px;
+		}
+	
+		&__menuNav {
+			margin-right: 80px;
+		}
+	
+		&__menuNav-text a{
+			position: relative;
+			text-decoration: none;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 24px;
+			line-height: 33px;
+			font-weight: 600;
+			color: #EBE6D1;
+			text-transform: uppercase;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 0%;
+				height: 2px;
+				background: #EBE6D1;
+				transition: 0.3s ease;
+			}
+			&:hover::before {
+				width: 100%;
+			}
+		}
+		&__menuNav-text {
+			margin-bottom: 50px;
+		}
+	
+		&__media {
+		}
+	
+		&__media-icon {
+			position: relative;
+			margin-bottom: 28px;
+			height: 45px;
+			width: 45px;
+			border-radius: 50%;
+			background: #EBE6D1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& i {
+				color: #2E303F;
+				cursor: pointer;
+				transition: 0.3s ease;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+			& i._icon-whatsapp {
+				font-size: 23px;
+			}
+			& i._icon-telegram {
+				font-size: 21px;
+			}
+			& i._icon-utube {
+				font-size: 17px;
+			}
+		}
+}
+
+.copyright {
+	font-size: 12px;
+	line-height: 16px;
+	color: #fff;
+}
